@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{% block room %} {% endblock %}
+<div id="sidebar">
+	<h3>Your Progress</h3>
+	<ul id="stats">
+		<li>Score: {{score}}</li>
+		<li>Health: {{hp}}</li>
+		<li>Strength: {{st}}</li>
+	</ul>
+	
+	<h3>Monster Stats:</h3>
+	<ul id="monstersrats">
+		<li>Monster Health: {{monhp}}</li>
+		<li>Monster Strength: {{monst}}</li>
+	</ul>
+	<h3>Inventory</h3>
+	<ul id="inventory">
+		{% for item in inv %}
+			<li class="item">{{item}}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
